@@ -1,0 +1,90 @@
+body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: white;
+      touch-action: none;
+    }
+    
+    #canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    
+    .controls {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 500px;
+    }
+    
+    .controls button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s;
+    }
+    
+    .controls button:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(1.05);
+    }
+    
+    .color-picker {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .color-option {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s;
+      border: 2px solid transparent;
+    }
+    
+    .color-option:hover {
+      transform: scale(1.2);
+    }
+    
+    .color-option.active {
+      border: 2px solid white;
+      transform: scale(1.2);
+    }
+    
+    .title {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      z-index: 2;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    
+    .instructions {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+      z-index: 2;
+      max-width: 300px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
